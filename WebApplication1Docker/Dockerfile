@@ -9,7 +9,7 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["WebApplication1Docker/WebApplication1Docker.csproj", "."]
+COPY ["WebApplication1Docker.csproj", "."]
 RUN dotnet restore "./WebApplication1Docker/WebApplication1Docker.csproj"
 COPY . .
 WORKDIR "/src/WebApplication1Docker"
