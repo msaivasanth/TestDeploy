@@ -18,6 +18,12 @@ namespace WebApplication1Docker.Controllers
             _logger = logger;
         }
 
+        [HttpGet("/")]
+        public string GetHello()
+        {
+            return "hello world!";
+        }
+
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
