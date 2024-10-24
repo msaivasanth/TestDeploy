@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using WebApplication1Docker.Data.DTO;
 
 namespace WebApplication1Docker.Controllers
 {
@@ -22,6 +23,13 @@ namespace WebApplication1Docker.Controllers
         public string GetHello()
         {
             return "hello world!";
+        }
+
+        [HttpPost("/api/fetch")]
+        public IActionResult SaveDetails([FromBody] UserDetails _patientDetails)
+        {
+            Console.WriteLine(_patientDetails.Name + " " + _patientDetails.DateOfBirth + " " + _patientDetails.PhoneNumber);
+            return Ok(new {success = true});
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
