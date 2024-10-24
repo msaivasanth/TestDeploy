@@ -1,4 +1,4 @@
-﻿namespace BlandAI_FetchDetails.Data.DTO
+﻿namespace WebApplication1Docker.Data.DTO
 {
     public class UserDetails
     {
